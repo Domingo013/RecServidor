@@ -47,13 +47,17 @@
                         $sql2 = "SELECT ip, lugar from lugar";
                         $resultado2 = $conexion->query($sql2);  // Ejecuta la consulta sql
 
-                        while($fila = $resultado2->fetch_assoc()){
+                        /*while($fila = $resultado2->fetch_assoc()){
                             if($fila['ip'] == $ip){
                                 echo "<option value='".$fila['ip']."'>".$fila['lugar']."</option>";
-                                $resultado2->data_seek(0);      // Muevo el puntero hasta la posición 0
                                 break;      // Finalizo la ejecución del bucle
                             }
+                        }*/
+                        while($fila = $resultado2->fetch_assoc() || $fila['ip'] == $ip){
+                            
                         }
+                        echo "<option value='".$fila['ip']."'>".$fila['lugar']."</option>";
+                        $resultado2->data_seek(0);      // Muevo el puntero hasta la posición 0
                         while($fila = $resultado2->fetch_assoc()){
                             if($fila['ip'] != $ip){
                                 echo "<option value='".$fila['ip']."'>".$fila['lugar']."</option>";
