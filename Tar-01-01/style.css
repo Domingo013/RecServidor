@@ -1,0 +1,33 @@
+body{
+    background-color: rgb(232, 217, 248);
+}
+
+h2{
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+div#contenedor{
+    background-color: rgb(154, 134, 192);
+    width: 300px;
+    height: 550px;
+    padding: 20px;
+    margin: 0 auto;
+    border: 2px solid rgb(126, 89, 196);
+    border-radius: 10px;
+}
+
+input#boton{
+    background-color: rgb(106, 30, 177);
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 110px;
+}
+
+span{
+    font-size: 14px;
+    font-weight: bold;
+}

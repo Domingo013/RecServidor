@@ -1,0 +1,45 @@
+body{
+    background-color: rgb(232, 217, 248);
+}
+
+h2{
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+div#contenedor{
+    background-color: rgb(154, 134, 192);
+    width: 280px;
+    height: 60px;
+    padding: 20px;
+    margin: 0 auto;
+    border: 2px solid rgb(126, 89, 196);
+    border-radius: 10px;
+    margin-top: 100px;
+}
+
+input#boton{
+    background-color: rgb(106, 30, 177);
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 100px;
+}
+
+div#contenedor2{
+    background-color: rgb(154, 134, 192);
+    width: 320px;
+    height: 80px;
+    padding: 20px;
+    margin: 0 auto;
+    border: 2px solid rgb(126, 89, 196);
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+#ids{
+    width: 100px;
+    margin-left: 105px;
+}
