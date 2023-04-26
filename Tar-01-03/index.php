@@ -1,0 +1,44 @@
+<?php
+    include_once ("./vistas/header.php");       // Mostrar el contenido de header.php
+    require_once './config/configdb.php';       // Trae los datos de configdb.php
+    require_once './modelo.php';                // Trae los valores del modelo.php 
+
+    if(isset($_POST["ejecutar"])){      // Si se pulsa el botón de ejecutar
+        $consultas = new Consultas();
+        $sql1 = $consultas->consultaSelect($_POST["consulta"]);   // Envío la consulta a la función de la clase
+
+        $numFilas = $sql1->num_rows;        // Saco el número de filas devueltas
+        echo '<caption>Numero de filas devueltas: '.$numFilas.'</caption>';
+
+        $aux = 1;       // Variable para bandera
+        if($numFilas > 0){      // Si ha devuelto 1 o más filas, crea la tabla con los valores
+            echo '<table>';
+            while($fila=$sql1->fetch_assoc()){      // Recorre el array para sacar los datos
+                if($aux == 1){      // Solo entra 1 vez ya que $aux pasa a valer 0
+                    echo '<tr>';
+                    foreach($fila as $indice=>$valor){      // Para mostrar el nombre de las columnas
+                        echo '<th>'.$indice.'</th>';
+                    }
+                    echo '</tr>';
+                }
+                $aux = 0;
+                echo '<tr>';
+                foreach($fila as $indice=>$valor){      // Para mostrar las filas de cada columna de la tabla
+                    echo '<td>'.$valor.'</td>';
+                }
+                echo '</tr>';
+            }
+            echo '</table>';
+        }else{
+            echo "No se ha devuelto nada";
+        }
+    }
+    if(isset($_POST["actualizar"])){      // Si se pulsa el botón de ejecutar
+        $consultas = new Consultas();   
+        $sql1 = $consultas->consultaActualizar($_POST["consulta"]);   // Envío la consulta a la función de la clase
+
+        $filasAfectadas = $sql1->affected_rows;
+        echo 'Número de filas afectadas: '.$filasAfectadas;
+    }
+    include_once("vistas/finhtml.php");     // Muestra el contenido html de finhtml.php
+?>

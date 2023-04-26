@@ -41,7 +41,7 @@
                     if($fila = $resultado1->fetch_assoc()){
                         echo 'La ip del lugar con id visita '.$id.' es '.$fila["ip"].'<br>';
                         $ip = $fila['ip'];
-
+                        $fila['ip'] = '1';
                         echo '<select name="visita" id="ids">';
                         // Consulta para obtener los nombres de los lugares
                         $sql2 = "SELECT ip, lugar from lugar";
@@ -53,19 +53,19 @@
                                 break;      // Finalizo la ejecución del bucle
                             }
                         }*/
-                        while($fila = $resultado2->fetch_assoc() || $fila['ip'] == $ip){
-                            
+                        while($fila = $resultado2->fetch_assoc() && $fila['ip'] != '1'){
+                            echo '<option value="">Avanza el puntero</option>';
+                            //echo '<option value="">'.$ip.'</option>';
                         }
-                        echo "<option value='".$fila['ip']."'>".$fila['lugar']."</option>";
-                        $resultado2->data_seek(0);      // Muevo el puntero hasta la posición 0
+                        //echo "<option value='".$fila['ip']."'>".$fila['lugar']."</option>";
+                        /*$resultado2->data_seek(0);      // Muevo el puntero hasta la posición 0
                         while($fila = $resultado2->fetch_assoc()){
                             if($fila['ip'] != $ip){
                                 echo "<option value='".$fila['ip']."'>".$fila['lugar']."</option>";
                                 //$row = $resultado2->fetch_row(0);
                             }
-                        }
+                        }*/
                         echo "</select>";
-
                         /* 
                             Si hacemos otro fetch y avanzamos el puntero después de la última fila nos dará 
                             un warning por intentar acceder a un valor que no existe
