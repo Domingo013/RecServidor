@@ -6,9 +6,7 @@
     if(isset($_POST["ejecutar"])){      // Si se pulsa el botón de ejecutar
         $consultas = new Consultas();
         $sql1 = $consultas->consultaSelect($_POST["consulta"]);   // Envío la consulta a la función de la clase
-
-        $numFilas = $sql1->num_rows;        // Saco el número de filas devueltas
-        echo '<caption>Numero de filas devueltas: '.$numFilas.'</caption>';
+        $numFilas = $consultas->numFilas;
 
         $aux = 1;       // Variable para bandera
         if($numFilas > 0){      // Si ha devuelto 1 o más filas, crea la tabla con los valores
@@ -36,9 +34,6 @@
     if(isset($_POST["actualizar"])){      // Si se pulsa el botón de ejecutar
         $consultas = new Consultas();   
         $sql1 = $consultas->consultaActualizar($_POST["consulta"]);   // Envío la consulta a la función de la clase
-
-        $filasAfectadas = $sql1->affected_rows;
-        echo 'Número de filas afectadas: '.$filasAfectadas;
     }
     include_once("vistas/finhtml.php");     // Muestra el contenido html de finhtml.php
 ?>

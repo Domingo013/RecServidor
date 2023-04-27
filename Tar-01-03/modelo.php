@@ -1,5 +1,8 @@
 <?php
     class Consultas{
+
+        public $numFilas;
+        public $filasAfectadas;
         
         public function __construct(){
             //echo "Llamo a conectar";
@@ -19,16 +22,18 @@
 
         public function consultaSelect($sql1){
             //echo "Entra en la función";
-            $resultado1 = $this->conexion->query($sql1);        // Ejecuta el query de la consulta sql
+            $resultado = $this->conexion->query($sql1);        // Ejecuta el query de la consulta sql
+            echo "Número de filas devueltas: ".$this->numFilas=$resultado->num_rows;
 
-            return $resultado1;      // Devuelvo el resultado en forma de array
+            return $resultado;      // Devuelvo el resultado en forma de array
         }
 
         public function consultaActualizar($sql1){
-            $resultado1 = $this->conexion->query($sql1);        // Ejecuta el query de la consulta sql
-            //$filasAfectadas = $this->conexion->affected_rows;       // Obtengo el numero de filas afectadas
-            //$array = array($resultado1, $filasAfectadas);       // Guardo en un array el numero de filas afectadas y el resultado
-            return $resultado1;      // Devuelve el array con el numero de filas afectadas
+            $resultado = $this->conexion->query($sql1);        // Ejecuta el query de la consulta sql
+            $this->filasAfectadas = $this->conexion->affected_rows;       // Obtengo el numero de filas afectadas
+            echo "Número de filas afectadas: ".$this->filasAfectadas;
+            
+            return $resultado;      // Devuelve el array con el numero de filas afectadas
         }
 
     }
