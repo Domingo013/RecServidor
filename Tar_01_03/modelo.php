@@ -1,7 +1,7 @@
 <?php
     class Consultas{
 
-        public $numFilas;
+        public $numFilas;       
         public $filasAfectadas;
         
         public function __construct(){
