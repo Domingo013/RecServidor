@@ -1,0 +1,5 @@
+Crea un formulario con todos los tipos de elementos. Debes usar un array para recoger varios valores en el elemento con checkbox.
+
+Muestra la información recogida, usando las funciones adecuadas para comprobar que elementos se han creado en el array que recoge los datos del formulario.
+
+Tarea revisada en clase con los alumnos

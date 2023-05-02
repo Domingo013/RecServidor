@@ -34,7 +34,7 @@
                     echo "Error de sintaxis SQL(Revisa la consulta SQL introducida)<br>";
                 }
             }  
-        }
+        }     
 
         public function consultaActualizar($sql1){
             try{
@@ -49,6 +49,5 @@
                 echo "Error de sintaxis SQL(Revisa la consulta SQL introducida)<br>";
             }
         }
-
     }
 ?>

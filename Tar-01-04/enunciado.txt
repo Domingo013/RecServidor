@@ -1,0 +1,6 @@
+VERSIÓN 1. Crea dos botones en el formulario para que el usuario indique si quiere hacer una consulta SELECT o de ACTUALIZACIÓN. 
+La página que recoge esta petición, redirige a su vez, según la opción elegida, a la página que hace el SELECT 
+o la página que permite ejecutar el INSERT, UPDATE o DELETE.
+
+
+VERSIÓN 2. Piensa otra forma de hacer este proceso, de forma que al ejecutar el HEADER, pase como parámetro la operación que se quiere realizar.

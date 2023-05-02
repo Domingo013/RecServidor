@@ -1,0 +1,2 @@
+Usando la base de datos jesuitas, introduce el id de la visita y muestra en un desplegable las ciudades:
+se debe mostrar en primer la lugar la ciudad que corresponde al id de la visita y a continuación las demás.
