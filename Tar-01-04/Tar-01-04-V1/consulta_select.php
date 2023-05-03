@@ -1,11 +1,12 @@
 <?php
-    include_once ("./vistas/resultado.php");       // Mostrar el contenido de header.php
+    include_once ("./vistas/resultado.php");    // Mostrar el contenido de header.php
     require_once './config/configdb.php';       // Trae los datos de configdb.php
     require_once './modelo.php';                // Trae los valores del modelo.php 
 
     //if(isset($_POST["ejecutar"])){      // Si se pulsa el botón de ejecutar
     $consultas = new Consultas();
     $sql = $consultas->consultaSelect($_GET["sql"]);   // Envío la consulta a la función de la clase
+    //$sql = $consultas->consultaSelect($_POST["consulta"]);   // Envío la consulta a la función de la clase
     $numFilas = $consultas->numFilas;
 
     $aux = 1;       // Variable para bandera

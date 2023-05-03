@@ -29,7 +29,9 @@
                 return $resultado;      // Devuelvo el resultado en forma de array
             }catch(Exception $e){
                 //echo $e->getMessage();
+                //echo "<br><br>";
                 //echo $e->getCode();
+                //echo "<br><br>";
                 if($e->getCode()==1064){
                     echo "Error de sintaxis SQL(Revisa la consulta SQL introducida)<br>";
                 }
@@ -45,8 +47,15 @@
                 return $resultado;      // Devuelve el array con el numero de filas afectadas
             }catch(Exception $e){
                 //echo $e->getMessage();
+                //echo "<br><br>";
                 //echo $e->getCode();
-                echo "Error de sintaxis SQL(Revisa la consulta SQL introducida)<br>";
+                //echo "<br><br>";
+                if($e->getCode()==1064){
+                    echo "Error de sintaxis SQL(Revisa la consulta SQL introducida)<br>";
+                }
+                if($e->getCode()==1062){
+                    echo "Valor introducido repetido(Revisa los datos ya indroducidos)<br>";
+                }
             }
         }
     }
