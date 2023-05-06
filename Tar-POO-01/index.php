@@ -32,7 +32,7 @@
             }else{
                 echo "No se ha devuelto nada";
             }
-        }elseif($primera == 'insert'){      // Si se pulsa el botón de ejecutar
+        }elseif($primera == 'insert' || $primera == 'update' || $primera == 'delete'){      // Si se pulsa el botón de ejecutar
             $consultas = new Consultas();   
             $sql1 = $consultas->consultaActualizar($_POST["consulta"]);   // Envío la consulta a la función de la clase
         }
