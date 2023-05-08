@@ -2,16 +2,21 @@ body{
     background-color: rgb(194, 232, 235);
 }
 
+a{
+    color: black;
+    text-decoration: none;
+}
+
 h2{
     margin-top: 50px;
     text-align: center;
 }
 
 div#formulario{
-    background-color: rgb(167, 208, 211);;
+    background-color: rgb(167, 208, 211);
     margin: 0 auto;
     padding: 15px;
-    box-shadow: 7px 5px 5px rgb(83, 83, 83);;
+    box-shadow: 7px 5px 5px rgb(83, 83, 83);
     border-radius: 10px;
     text-align: center;
     width: 50%;
@@ -26,11 +31,19 @@ input{
     border-radius: 4px;
 }
 
-input#boton{
+input.boton, #volver{
+    cursor: pointer;
     width: 100px;
     margin-top: 10px;
     padding: 3px 5px;
     font-weight: bold;
+}
+
+a#volver{
+    background-color: rgb(167, 208, 211);
+    border: 1px solid rgb(148, 148, 148);
+    border-radius: 4px;
+    text-align: center;
 }
 
 div#resultado{
@@ -38,7 +51,7 @@ div#resultado{
     background-color: rgb(167, 208, 211);
     margin: 0 auto;
     padding: 15px;
-    box-shadow: 7px 5px 5px rgb(83, 83, 83);;
+    box-shadow: 7px 5px 5px rgb(83, 83, 83);
     border-radius: 10px;
     text-align: center;
 }

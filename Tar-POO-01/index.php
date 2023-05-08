@@ -5,7 +5,18 @@
 
     if(isset($_POST["ejecutar"])){      // Si se pulsa el botón de ejecutar
         $consultas = new Consultas();
-        $primera = strtolower(substr($_POST["consulta"], 0, 6));     // Pasamos a minúsculas toda la consulta SQL y nos quedamos con las 6 primeras letras
+        //$primera = strtolower(substr($_POST["consulta"], 0, 6));     // Pasamos a minúsculas toda la consulta SQL y nos quedamos con las 6 primeras letras
+
+        // Utilizo el str_replace para sustituir los espacios en blanco por nada y así la palabra que los 6 primeros caracteres estará completa.
+        $primera = strtolower(substr(str_replace(' ', '', $_POST["consulta"]), 0, 6));     // Pasamos a minúsculas toda la consulta SQL y nos quedamos con las 6 primeras letras
+
+        // Utilizo el trim para quitar los espacios en blanco de la izquierda y de la derecha, así la palabra de los 6 primeros caracteres estará completa.
+        //$primera = strtolower(substr(trim($_POST["consulta"]), 0, 6));     // Pasamos a minúsculas toda la consulta SQL y nos quedamos con las 6 primeras letras
+
+        //echo ".".$primera.".<br>";
+        //$primera = str_replace(' ', '', $primera);
+        //echo ".".$primera.".<br>";
+        //echo $_POST["consulta"]."<br>";
         if($primera == 'select'){
             $sql1 = $consultas->consultaSelect($_POST["consulta"]);   // Envío la consulta a la función de la clase
             $numFilas = $consultas->numFilas;

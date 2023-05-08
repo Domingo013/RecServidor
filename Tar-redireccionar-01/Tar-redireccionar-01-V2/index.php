@@ -1,9 +1,9 @@
 <?php
     include_once ("./vistas/header.php");       // Mostrar el contenido de header.php
-    require_once './config/configdb.php';       // Trae los datos de configdb.php
-    require_once './modelo.php';                // Trae los valores del modelo.php 
+    //require_once './config/configdb.php';       // Trae los datos de configdb.php
+    //require_once './modelo.php';                // Trae los valores del modelo.php 
 
-    if(isset($_POST["ejecutar"])){      // Si se pulsa el botón de ejecutar
+    /*if(isset($_POST["ejecutar"])){      // Si se pulsa el botón de ejecutar
         $consultas = new Consultas();
         $sql1 = $consultas->consultaSelect($_POST["consulta"]);   // Envío la consulta a la función de la clase
         $numFilas = $consultas->numFilas;
@@ -34,6 +34,6 @@
     if(isset($_POST["actualizar"])){      // Si se pulsa el botón de ejecutar
         $consultas = new Consultas();   
         $sql1 = $consultas->consultaActualizar($_POST["consulta"]);   // Envío la consulta a la función de la clase
-    }
+    }*/
     include_once("vistas/finhtml.php");     // Muestra el contenido html de finhtml.php
 ?>
