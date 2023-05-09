@@ -3,6 +3,9 @@
     require_once './config/configdb.php';       // Trae los datos de configdb.php
     require_once './modelo.php';                // Trae los valores del modelo.php 
 
+    $_COOKIE['contadors'] = 0;
+    $_COOKIE['contadora'] = 0;
+
     if(isset($_POST["ejecutar"])){      // Si se pulsa el botón de ejecutar
   
         $consultas = new Consultas();
