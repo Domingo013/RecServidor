@@ -1,0 +1,14 @@
+Crea una clase para hacer este proceso, que debe tener:
+Un método que permita ejecutar una consulta select y devuelva el resultado. También necisatamos dar valor al número de filas que se obtienen en esta consulta.
+Un método para ejecutar una consulta de actualización (insert, update, delete). 
+
+También necisatamos dar valor al número de filas que afectas por esta consulta.
+Usa más métodos si lo ves necesario.
+Página del usuario:
+Formulario para la consulta que quiere realizar.
+Mostrar resultado de la consulta: si es select, cada una de las filas y el nº total de filas; si es de actualización, 
+el nº de filas afectadas, si ha podido realizar la consulta. (La página comprobará si la consulta enviada es SELECT, INSERT, UPDATE o DELETE para decidir que método usar)
+Debe tener instrucciones para que entienda como usar la aplicación (debe modificar el archivo configdb.php con los datos de 
+conexión de su base de datos y usar el formulario para hacer la consulta.
+Debes validar todos los errores posibles, empezando por tener en cuenta si es una consulta sql o si lo que tiene es un error de sintaxis, 
+o bien, que el error es debido a que no cumple una restricción del diseño de la base de datos. Si una consulta SELECT devuelve 0 filas no es un error, pero debe mostrarse de la forma adecuada.

@@ -1,0 +1,84 @@
+body{
+    background-color: rgb(194, 232, 235);
+}
+
+h2{
+    margin-top: 50px;
+    text-align: center;
+}
+
+div#formulario{
+    background-color: rgb(167, 208, 211);
+    margin: 0 auto;
+    padding: 15px;
+    box-shadow: 7px 5px 5px rgb(83, 83, 83);
+    border-radius: 10px;
+    text-align: center;
+    width: 50%;
+    min-width: 600px;
+}
+
+input{
+    width: 80%;
+    margin-top: 10px;
+    padding: 1px 5px;
+    border: 1px solid rgb(148, 148, 148);
+    border-radius: 4px;
+}
+
+input#boton{
+    width: 100px;
+    margin-top: 10px;
+    padding: 3px 5px;
+    font-weight: bold;
+}
+
+div#resultado{
+    width: 60%;
+    background-color: rgb(167, 208, 211);
+    margin: 0 auto;
+    padding: 15px;
+    box-shadow: 7px 5px 5px rgb(83, 83, 83);
+    border-radius: 10px;
+    text-align: center;
+}
+
+table{
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid rgb(148, 148, 148);
+    border-collapse: collapse;
+}
+
+td, th{
+    border: 1px solid rgb(148, 148, 148);
+    padding: 2px 8px;
+}
+
+div#contadorSelect{
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    font-size: 20px;
+    background-color: rgb(167, 208, 211);
+    width: 60px;
+    height: 30px;
+    border: 1px solid rgb(148, 148, 148);
+    box-shadow: 7px 5px 5px rgb(83, 83, 83);
+    border-radius: 10px;
+    text-align: center;
+}
+
+div#contadorActualizar{
+    position: absolute;
+    top: 150px;
+    left: 20px;
+    font-size: 20px;
+    background-color: rgb(167, 208, 211);
+    width: 60px;
+    height: 30px;
+    border: 1px solid rgb(148, 148, 148);
+    box-shadow: 7px 5px 5px rgb(83, 83, 83);
+    border-radius: 10px;
+    text-align: center;
+}
