@@ -1,0 +1,46 @@
+body{
+    background-color: rgb(194, 232, 235);
+}
+
+h2{
+    margin-top: 50px;
+    text-align: center;
+}
+
+div#formulario{
+    background-color: rgb(167, 208, 211);
+    margin: 0 auto;
+    padding: 15px;
+    box-shadow: 7px 5px 5px rgb(83, 83, 83);
+    border-radius: 10px;
+    text-align: center;
+    width: 50%;
+    min-width: 600px;
+}
+
+input{
+    width: 350px;
+    margin-top: 10px;
+    padding: 1px 5px;
+    /* border: 1px solid rgb(148, 148, 148); */
+    border-radius: 4px;
+}
+
+input#boton{
+    width: 140px;
+    margin-top: 10px;
+    padding: 3px 5px;
+    font-weight: bold;
+}
+
+div#error{
+    background-color: rgb(247, 170, 170);
+    width: 30%;
+    height: 250px;
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px auto;
+    text-align: center;
+}
