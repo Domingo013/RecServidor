@@ -9,10 +9,10 @@
         // Mostrar el valor del contador de select
         echo "<div id='contadorSelect'>".$_COOKIE['contadors']."</div>";
         echo "<div id='contadorActualizar'>".$_COOKIE['contadora']."</div>";
-        // Si ya está configurada, aumenta su valor en 1
+        // Si ya está configurada, aumento su valor en 1
         //$contadors = $_COOKIE['contadors'] + 1;
     }else{
-        // Si no está configurada, establece su valor en 1
+        // Si no está configurada, pongo su valor en 1
         //$contadors = 1;
         setcookie('contadors', 0, time() + 86400);     // La cookie expirará en 1 día
         setcookie('contadora', 0, time() + 86400);     // La cookie expirará en 1 día
@@ -24,6 +24,7 @@
             setcookie('contadors', $numContadors, time() + 86400);
         }
         $consultas = new Consultas();
+
         //$primera = strtolower(substr($_POST["consulta"], 0, 6));     // Pasamos a minúsculas toda la consulta SQL y nos quedamos con las 6 primeras letras
 
         // Utilizo el str_replace para sustituir los espacios en blanco por nada y así la palabra que los 6 primeros caracteres estará completa.
@@ -36,6 +37,7 @@
         //$primera = str_replace(' ', '', $primera);
         //echo ".".$primera.".<br>";
         //echo $_POST["consulta"]."<br>";
+
         if($primera == 'select'){
 
             $sql1 = $consultas->consultaSelect($_POST["consulta"]);   // Envío la consulta a la función de la clase
@@ -72,9 +74,6 @@
             $sql1 = $consultas->consultaActualizar($_POST["consulta"]);     // Envío la consulta a la función de la clase
         }
     }
-    
-    // Mostrar el valor del contador de actualizar
-    echo "<div id='contadorActualizar'>".$_COOKIE['contadora']."</div>";
 
     include_once("vistas/finhtml.php");     // Muestra el contenido html de finhtml.php
 ?>

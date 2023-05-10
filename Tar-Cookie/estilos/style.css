@@ -60,10 +60,10 @@ div#contadorSelect{
     top: 100px;
     left: 20px;
     font-size: 20px;
+    padding-top: 5px;
     background-color: rgb(167, 208, 211);
     width: 60px;
     height: 30px;
-    border: 1px solid rgb(148, 148, 148);
     box-shadow: 7px 5px 5px rgb(83, 83, 83);
     border-radius: 10px;
     text-align: center;
@@ -74,10 +74,10 @@ div#contadorActualizar{
     top: 150px;
     left: 20px;
     font-size: 20px;
+    padding-top: 5px;
     background-color: rgb(167, 208, 211);
     width: 60px;
     height: 30px;
-    border: 1px solid rgb(148, 148, 148);
     box-shadow: 7px 5px 5px rgb(83, 83, 83);
     border-radius: 10px;
     text-align: center;
