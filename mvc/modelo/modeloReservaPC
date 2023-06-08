@@ -1,0 +1,24 @@
+<?php
+
+    class ModeloReservaPC{
+
+	private $table = 'ReservaOrdenadores';
+    private $conexion;      // Atributo conexión
+        
+        public function __construct() {
+            
+        }
+
+        public function getConexion(){
+            $objetoModelodb = new Modelodb();
+            $this->conexion = $objetoModelodb->conexion;    // El atributo conexión de esta clase lo igualamos a el valor devuelto de la función conectar del modelodb
+        }
+
+        public function reservarOrdenadores(){
+            $this->getConexion();
+        
+            
+        }
+    }
+    
+    // Fin del código php
